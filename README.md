@@ -167,7 +167,7 @@ docker build -t traefik-with-oidc-plugin .
 Run the local playground server:
 
 ```bash
-KEYCLOAK_URL="https://keycloak.example.com/realms/myrealm" TOKEN_REQUEST_TIMEOUT_SECONDS=10 go run debug/.
+KEYCLOAK_URL="https://keycloak.example.com/realms/myrealm" TOKEN_REQUEST_TIMEOUT_SECONDS=10 go run ./debug
 ```
 
 Send a request with client headers. The middleware will return the forwarded `Authorization` header in the response so you can see the new token:
