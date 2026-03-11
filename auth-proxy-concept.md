@@ -101,6 +101,7 @@ Runs inside Traefik itself. No extra container.
 | `sevensolutions/traefik-oidc-auth` | ❌ | ✅ | Best maintained, clean config |
 | `lukaszraczylo/traefikoidc` | ❌ | ✅ | More features (PKCE, RBAC, Redis sessions) |
 | `keycloakopenid` | ✅ | ✅ | Supports client credentials flow |
+| `go-traefik-keycloak-exchange` | ✅ | ❌ | Focused on header exchange and token injection |
 
 **Limitation:** Most native plugins do not support the optional `X-Client-Id`/`X-Client-Secret` exchange flow out of the box.
 
@@ -182,11 +183,15 @@ Do you need X-Client-Id / X-Client-Secret exchange?
 │
 ├─ NO  ──► Use traefik-oidc-auth plugin (simplest, no sidecar)
 │
-└─ YES ──► Do you want to avoid writing custom code?
+└─ YES ──► Do you also need bearer token introspection?
            │
-           ├─ YES ──► Use keycloakopenid plugin or gogatekeeper
+           ├─ NO  ──► Use go-traefik-keycloak-exchange (this project)
            │
-           └─ NO  ──► Write a custom ForwardAuth sidecar (full control)
+           └─ YES ──► Do you want to avoid writing custom code?
+                     │
+                     ├─ YES ──► Use keycloakopenid plugin or gogatekeeper
+                     │
+                     └─ NO  ──► Write a custom ForwardAuth sidecar (full control)
 ```
 
 ---
