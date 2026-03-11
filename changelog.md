@@ -1,3 +1,3 @@
-## Changes since v0.1.0
+## Changes since v0.1.1
 
-- provide changelog auto (Dede Kurniawan)
+- adjust md files (Dede Kurniawan)
