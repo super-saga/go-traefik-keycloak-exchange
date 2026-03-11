@@ -1,0 +1,11 @@
+displayName: "Traefik Keycloak OIDC Exchange"
+type: middleware
+import: github.com/super-saga/go-traefik-keycloak-exchange
+summary: "Exchanges client credentials with Keycloak and injects Authorization header"
+iconPath: ./icon.png
+testData:
+  keycloakURL: "https://keycloak.example.com/realms/myrealm"
+  clientIDHeader: "X-Client-ID"
+  clientSecretHeader: "X-Client-Secret"
+  requireClientCredentials: true
+  tokenRequestTimeoutSeconds: 10
