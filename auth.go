@@ -1,4 +1,4 @@
-package traefik_keycloak_exchange
+package go_traefik_keycloak_exchange
 
 import (
 	"context"
