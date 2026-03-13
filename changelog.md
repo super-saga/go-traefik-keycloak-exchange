@@ -1,3 +1,3 @@
-## Changes since v0.1.2
+## Changes since v0.1.3
 
-- pakcage name adjust (Dede Kurniawan)
+- add more docs (Dede Kurniawan)
